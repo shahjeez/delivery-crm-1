@@ -1,0 +1,55 @@
+/* src/pages/home/Home.scss */
+.home {
+  display: flex;
+  flex-direction: column;
+
+  .homeContainer {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+
+    .widgets {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        padding: 10px;
+        gap: 10px;
+      }
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    .listContainer {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 20px;
+      margin: 20px;
+
+      @media (max-width: 768px) {
+        padding: 15px;
+        margin: 15px;
+      }
+
+      @media (max-width: 480px) {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .listTitle {
+        font-weight: 500;
+        color: gray;
+        margin-bottom: 15px;
+
+        @media (max-width: 480px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

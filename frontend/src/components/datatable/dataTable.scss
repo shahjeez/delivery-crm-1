@@ -1,0 +1,156 @@
+.dataTable {
+  height: auto; /* Allow height to adjust based on content */
+  padding: 10px;
+  max-width: 1440px; /* Ensure the table adapts to the container width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    gap: 10px;
+    justify-content: center; /* Center buttons horizontally */
+    max-width: 100%; /* Ensure buttons do not exceed container width */
+
+    .addProduct,
+    .addCategory,
+    .addSubCategory {
+      flex: 1 1 auto; /* Allow buttons to grow and shrink */
+      max-width: 200px; /* Set a maximum width for buttons */
+      padding: 10px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #3f51b5;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #303f9f;
+      }
+    }
+  }
+
+  .MuiDataGrid-root {
+    width: 100%; /* Ensure DataGrid takes full width of its container */
+
+    .MuiDataGrid-cell {
+      padding: 10px; /* Add padding inside cells */
+      box-sizing: border-box;
+      height: 70px; /* Adjust the cell height as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    flex-direction: row; /* Arrange buttons side by side */
+    align-items: center; /* Center align buttons vertically */
+    gap: 10px; /* Space between buttons */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Add padding to ensure buttons are visible */
+    box-sizing: border-box; /* Ensure padding and border are included */
+    width: 100%; /* Ensure cell action takes full width */
+
+    .viewButton,
+    .removeButton {
+      flex: 1; /* Allow buttons to grow and shrink */
+      min-width: 80px; /* Set a minimum width for buttons */
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px; /* Increase font size for better readability */
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+      box-sizing: border-box; /* Ensure padding and border are included */
+    }
+
+    .viewButton {
+      background-color: #4caf50; /* Green background */
+      color: white;
+
+      &:hover {
+        background-color: #388e3c;
+      }
+    }
+
+    .removeButton {
+      background-color: #f44336; /* Red background */
+      color: white;
+
+      &:hover {
+        background-color: #d32f2f;
+      }
+    }
+  }
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .dataTable {
+    .buttons {
+      .addProduct,
+      .addCategory,
+      .addSubCategory {
+        max-width: 150px; /* Adjust maximum width for medium screens */
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dataTable {
+    .buttons {
+      flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .MuiDataGrid-root {
+      .MuiDataGrid-cell {
+        font-size: 12px; /* Smaller font size inside cells */
+      }
+    }
+
+    .cellAction {
+      flex-direction: column; /* Stack action buttons vertically */
+      gap: 5px; /* Reduce space between buttons */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dataTable {
+    padding: 5px;
+
+    .buttons {
+      .addProduct,
+      .addCategory,
+      .addSubCategory {
+        font-size: 12px; /* Even smaller font size on very small screens */
+        padding: 8px;
+        max-width: 100%; /* Ensure buttons fit within container */
+      }
+    }
+
+    .MuiDataGrid-root {
+      .MuiDataGrid-cell {
+        padding: 5px; /* Reduce padding inside cells */
+      }
+    }
+
+    .cellAction {
+      .viewButton,
+      .removeButton {
+        font-size: 10px; /* Smaller font size on very small screens */
+        padding: 6px;
+        min-width: 60px; /* Adjust minimum width for very small screens */
+      }
+    }
+  }
+}

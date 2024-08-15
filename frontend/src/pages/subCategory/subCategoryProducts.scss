@@ -1,0 +1,96 @@
+.sub-category-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  padding-left: 300px;
+  .loading,
+  .error {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .data-grid-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+
+    .MuiDataGrid-root {
+      border: none;
+
+      .MuiDataGrid-cell {
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .MuiDataGrid-columnHeader {
+        background-color: #f4f4f4;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .MuiDataGrid-footerContainer {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+
+  // Media Queries
+  @media (max-width: 1200px) {
+    .data-grid-container {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 15px;
+
+    .loading,
+    .error {
+      font-size: 1rem;
+    }
+
+    .data-grid-container {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .loading,
+    .error {
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    .data-grid-container {
+      margin-top: 10px;
+    }
+
+    .MuiDataGrid-root {
+      font-size: 0.9rem;
+
+      .MuiDataGrid-columnHeader {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .loading,
+    .error {
+      font-size: 0.8rem;
+    }
+
+    .data-grid-container {
+      margin-top: 5px;
+    }
+  }
+}

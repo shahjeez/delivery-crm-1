@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  width: 100%;
+
+  .listContainer {
+    flex: 6;
+  }
+
+  // Adjust layout for smaller screens
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    .listContainer {
+      flex: 1;
+      width: 100%;
+      padding: 10px; // Add padding for better spacing
+    }
+  }
+
+  @media (max-width: 768px) {
+    .listContainer {
+      padding: 5px; // Reduce padding for smaller screens
+    }
+  }
+
+  @media (max-width: 480px) {
+    .listContainer {
+      padding: 2px; // Further reduce padding for very small screens
+    }
+  }
+}

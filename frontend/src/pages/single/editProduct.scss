@@ -1,0 +1,63 @@
+.edit {
+  display: flex;
+  flex-direction: column; // Ensure flex items stack vertically on smaller screens
+
+  @media (min-width: 768px) {
+    flex-direction: row; // Use row layout for larger screens
+  }
+}
+
+.editContainer {
+  flex: 4;
+  padding: 20px;
+  background-color: #f9f9f9; // Optional: Add background color for better visibility
+
+  @media (max-width: 768px) {
+    padding: 15px; // Adjust padding for smaller screens
+  }
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+
+  p {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px; // Adjust font size for better readability
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; // Adjust font size for better readability
+  }
+
+  .react-select__control {
+    margin-bottom: 16px;
+  }
+
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; // Add transition for hover effect
+
+    &:hover {
+      background-color: #0056b3; // Darken button color on hover
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; // Ensure form takes full width on smaller screens
+    padding: 10px; // Adjust padding for smaller screens
+  }
+}

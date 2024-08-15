@@ -1,0 +1,116 @@
+.subCategoryListContainer {
+  display: flex;
+  gap: 20px;
+  .list {
+    flex: 1;
+    display: flex;
+    flex-direction: column; // Ensure content is displayed in column layout
+    gap: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.addSubCategory {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 300px;
+
+  &:hover {
+    background-color: #1565c0;
+  }
+}
+
+.dataTable {
+  flex: 1; // Make sure it takes available space
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .MuiDataGrid-root {
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .MuiDataGrid-columnHeaders {
+      background-color: #f5f5f5;
+
+      .MuiDataGrid-columnHeaderTitle {
+        font-weight: bold;
+        color: #333;
+        padding: 15px;
+      }
+    }
+
+    .MuiDataGrid-cell {
+      padding: 20px; // Increased padding for more height
+      line-height: 1.5; // Increased line height for better vertical spacing
+      border-bottom: 1px solid #ddd;
+      font-size: 0.9em;
+
+      &:nth-of-type(even) {
+        background-color: #f9f9f9;
+      }
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+
+    .MuiDataGrid-footerContainer {
+      border-top: 1px solid #ddd;
+    }
+
+    .MuiDataGrid-toolbarContainer {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .MuiDataGrid-root {
+      .MuiDataGrid-columnHeaders {
+        .MuiDataGrid-columnHeaderTitle {
+          font-size: 0.8em;
+        }
+      }
+
+      .MuiDataGrid-cell {
+        font-size: 0.8em;
+        padding: 15px; // Adjusted padding for smaller screens
+      }
+
+      .MuiDataGrid-toolbarContainer {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .MuiDataGrid-root {
+      .MuiDataGrid-columnHeaders {
+        .MuiDataGrid-columnHeaderTitle {
+          font-size: 0.7em;
+        }
+      }
+
+      .MuiDataGrid-cell {
+        font-size: 0.7em;
+        padding: 12px; // Adjusted padding for smaller screens
+      }
+
+      .MuiDataGrid-toolbarContainer {
+        font-size: 0.7em;
+      }
+    }
+  }
+}

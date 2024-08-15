@@ -1,0 +1,100 @@
+.category-detail {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+
+  .sidebar {
+    width: 250px; // Adjust the width of your sidebar
+    position: fixed; // Sidebar remains fixed as you scroll
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #e9e9e9;
+  }
+
+  .categoryContainer {
+    margin-left: 250px; // This should match the width of your sidebar
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categoryDetails {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .editButton,
+      .hideButton {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .editButton {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .hideButton {
+        background-color: #f44336;
+        color: white;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .categoryContainer {
+      margin-left: 0;
+      padding: 10px;
+    }
+
+    .categoryDetails {
+      padding: 10px;
+    }
+
+    .details {
+      padding: 10px;
+    }
+  }
+}

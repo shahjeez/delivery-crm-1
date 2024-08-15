@@ -1,0 +1,144 @@
+.orderListContainer {
+  display: flex;
+  gap: 20px;
+  .list {
+    width: 80%;
+  }
+}
+.table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .MuiTableContainer-root {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .MuiTable-root {
+    width: 100%;
+    background-color: #fff;
+    padding-left: 10px;
+    .MuiTableHead-root {
+      background-color: #f5f5f5;
+
+      .MuiTableRow-root {
+        .MuiTableCell-head {
+          font-weight: bold;
+          padding: 15px;
+          color: #333;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+
+    .MuiTableBody-root {
+      .MuiTableRow-root {
+        transition: background-color 0.3s ease;
+
+        &:nth-of-type(even) {
+          background-color: #f9f9f9;
+        }
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        .MuiTableCell-body {
+          padding: 15px;
+          border-bottom: 1px solid #ddd;
+
+          &.tableCell {
+            text-align: center;
+            vertical-align: middle;
+          }
+
+          .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+
+            &.Pending {
+              background-color: #ffecb3;
+              color: #ff9800;
+            }
+
+            &.Delivered {
+              background-color: #c8e6c9;
+              color: #4caf50;
+            }
+
+            &.Cancelled {
+              background-color: #ffcdd2;
+              color: #f44336;
+            }
+          }
+
+          .detailButton {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1976d2;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #1565c0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .MuiTable-root {
+      .MuiTableHead-root,
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          .MuiTableCell-root {
+            font-size: 0.8em;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .detailButton {
+      font-size: 0.8em;
+      padding: 6px 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .MuiTable-root {
+      .MuiTableHead-root,
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          display: block;
+
+          .MuiTableCell-root {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7em;
+            padding: 8px;
+
+            &:before {
+              content: attr(data-label);
+              font-weight: bold;
+              flex: 1;
+              text-align: left;
+            }
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

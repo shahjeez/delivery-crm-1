@@ -1,0 +1,88 @@
+.order-detail {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-left: 300px;
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+
+    @media (max-width: 768px) {
+      font-size: 20px; // Adjust font size for smaller screens
+    }
+  }
+
+  .order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div {
+      font-size: 16px;
+      color: #555;
+
+      strong {
+        color: #333;
+      }
+
+      select {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 100%; // Ensure the select box fits within the container on small screens
+      }
+    }
+
+    @media (max-width: 768px) {
+      div {
+        font-size: 14px; // Adjust font size for smaller screens
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 16px; // Adjust font size for smaller screens
+    }
+  }
+}
+
+.order-products {
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 8px 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+
+      @media (max-width: 768px) {
+        padding: 6px 8px; // Adjust padding for smaller screens
+        font-size: 14px; // Adjust font size for smaller screens
+      }
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    .product-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+
+      @media (max-width: 768px) {
+        width: 40px; // Adjust image size for smaller screens
+        height: 40px;
+      }
+    }
+  }
+}
